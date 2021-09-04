@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+html {
+  font-family: 'Karla', sans-serif;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  line-height: 1.3;
+  background-color: var(--lightGray);
+  color: var(--grayishBlue);
+  padding: 1.8rem;
+}
+:root {
+  --white: hsl(0, 0%, 100%);
+  --cyan: hsl(179, 62%, 40%);
+  --lightCyan: hsl(179, 62%, 45%);
+  --yellow: hsl(71, 73%, 54%);
+  --darkYellow: hsl(71, 73%, 48%);
+  --lightGray: hsl(204, 43%, 93%);
+  --grayishBlue: hsl(218, 22%, 67%);
+}
+a {
+  text-decoration: none;
+}
+h1, h2, h3 {  
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 1.15;
+}
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+p {
+  margin-top: 0;
+}
+.grid {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 40rem;
+  margin: 5rem auto;
+}
+.grid > * {
+  padding: 2.4rem 2.2rem;
+}
+.item1 {
+  background-color: #ffffff;  
+}
+.item1 h2 {
+  color: var(--cyan);
+}
+.item1 .subtitle {    
+  font-size: 1rem;
+  color: var(--yellow);
+  font-weight: bold;  
+  margin-bottom: 1rem;
+}
+.item1 p {
+  font-size: 0.85rem;  
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+.item2, .item3 {
+  color: var(--lightGray);
+}
+.item2 {
+  background-color: var(--cyan);  
+}
+.item2__price {  
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+.item2__price span {
+  font-size: 1rem;
+  margin-left: 0.8rem;
+  font-weight: normal;
+  opacity: 0.75;
+}
+.item2 p {
+  font-size: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+.item2 a {
+  display: block;
+  background-color: var(--yellow);
+  color: #ffffff;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); 
+  transition: background-color 200ms ease;
+}
+.item2 a:hover {
+  background-color: var(--darkYellow);  
+}
+.item3 {
+  background-color: var(--lightCyan);
+}
+.item3 ul {
+  margin-top: 0;
+  padding: 0;
+}
+.item3 ul li {
+  list-style-type: none;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+@media only screen and (min-width: 63em){
+
+  .grid {    
+    display: grid;    
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .item1 {
+    grid-column: 1 / 3;
+  }
+}
